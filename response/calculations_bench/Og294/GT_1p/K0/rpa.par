@@ -1,0 +1,83 @@
+c---- number of gauss-meshpoints
+      parameter (     NGH =        24 )
+      parameter (     NGL =        24 )
+      parameter (     NGLEG =      24 )
+c
+c---- maximal oscillator quantum number for fermions
+      parameter (     N0FX =       24 )
+      parameter (     nxx  =       N0FX/2)
+c
+c---- maximal number of (k,parity)-blocks
+      parameter (     NBX =  2*N0FX+1 )
+c
+c---- max. number of all levels for protons or neutrons
+      parameter (     NTX1 = 2*(nxx+1)*(nxx+2)*(2*nxx+3)/3-1 )
+      parameter (     NTX2 = (2*nxx+1)*(nxx+1) )
+      parameter (     NTX3 = 2*nxx*(nxx+1)*(2*nxx+1)/3  )
+      parameter (     NTX  = NTX1+NTX2+NTX3-1 )
+
+c
+c---- max. number of eigenstates for protons or neutrons      
+      parameter ( KX1 = (nxx+1)**2)
+      parameter ( KX2 = 2*nxx*(nxx+1)*(2*nxx+1)/3 )
+      parameter ( KX3 = nxx*(nxx+1) )     
+      parameter ( KX4 = KX1+KX2+KX3 )
+      parameter ( KX  =     NTX-KX4 )
+
+c---- max. nz-quantum number of fermions
+      parameter (     NZX  =   N0FX+1 )
+c
+c---- max. nr-quantum number of fermions
+      parameter (     NRX  = nxx )
+
+c---- max. ml-quantum number of fermions
+      parameter (     MLX  =        N0FX+1 )
+
+c---- maximal dimension F of one k-block
+      parameter (     NFX  =       (nxx+1)**2 )
+c
+c---- maximal dimension G of one k-block
+      parameter (     NGX  =       (nxx+1)*(nxx+2) )
+
+
+
+
+      parameter ( NHX    = NFX+NGX )
+      parameter ( NHBX   = NHX+NHX )
+      parameter ( NHBQX  = NHBX*NHBX )
+      parameter ( MG     = (NGH+1)*(NGL+1) )
+      parameter ( NGH2   = NGH+NGH )
+
+
+c---- maximal number for ph pairs
+      parameter (      NPHX =   140000 )
+c---- maximal number for BLOCKED ph pairs
+      parameter (      NPHXBL =   1000 )
+      
+c---- arrays of xh start from 0
+      parameter (      NGH1 = NGH + 1 )
+      parameter (      NGL1 = NGL + 1 )
+c---- number of points for Gauss-Legendre integration
+      parameter (      N_gauleg = 60  )
+c---- maximal number of ph channels
+      parameter (      MPHX =       8*NGH1*NGL1 )
+c---- maximum number of external field operators
+      parameter (NPTR = 5 )
+c---- maximum number of response functions
+      parameter (NRESP = NPTR*NPTR - NPTR*(NPTR-1)/2)
+
+c---- for separable pairing interaction:      
+      parameter( NZMAX = N0FX );
+      parameter( NRMAX = N0FX );
+      parameter( MLMAX = N0FX );
+c---- maximal number of pp channels
+      parameter (  NZMAX1 = NZMAX + 1)
+      parameter (  NRMAX1 = NRMAX + 1)
+      parameter (  MPPX =   3*NZMAX1*NRMAX1   )
+c---- total number of charge-exchange channels
+      parameter (  MTX = 2*MPHX + 2*MPPX )
+c---- maximum number of coord space channels
+      parameter (  N2FX = (N0FX+1)*(N0FX+1) )
+
+c---- maximal number for GFV
+      parameter (      IGFV =       100 )

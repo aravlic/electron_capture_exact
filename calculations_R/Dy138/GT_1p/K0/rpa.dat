@@ -1,0 +1,35 @@
+c-----------K^\pi---------------------------------------------------
+J  Pi    =    1   +1              ! ang. mom. and parity           |
+K        =    0                   ! ang. mom. projection           |
+c------quasiparticle cut-offs---------------------------------------
+equ_cut  = 500.0                  ! max energy of qp pair          |
+qptresh  =  0.0                   ! UV treshold                    |
+c-----------mesh properties(only lin.res.)--------------------------
+beta_dec =    2                   | beta decay (1=B+,2=EC)         |
+en_start =  0.0                   ! start energy (QRPA)            |
+en_end   = 30.0                   ! end energy   (QRPA)            |
+en_int   =  0.1                   ! energy delta                   |
+eta      =  1.00                  ! width                          |
+c----- isoscalar pairing strength ---------------------------------|
+V0_pp    =  1.431                                                   |
+c----- axial-vector coupling- -------------------------------------|
+g_A      =  -0.704                                                   |
+c----- Landau-Migdal strength -------------------------------------|
+deltafac =  0.613                                                   |
+c----- transition density---- -------------------------------------|
+trdens   =  0                     ! 0 no 1 yes
+energy   = -2.970                 ! MeV, wrt parent
+c-------------------------------------------------------------------
+N_orb    =   12                    ! number of lepton orbitals     |
+    1   -1       1s1_2
+    2   -1       2s1_2
+    3   -1       3s1_2
+    4   -1       4s1_2
+    1   +1       1p1_2
+    2   +1       2p1_2
+    3   +1       3p1_2
+    1   -2       1p3_2
+    2   -2       2p3_2
+    3   -2       3p3_2
+    1   +2       1d3_2
+    1   -3       1d5_2

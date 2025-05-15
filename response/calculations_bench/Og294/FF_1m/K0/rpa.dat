@@ -1,0 +1,27 @@
+c-----------K^\pi---------------------------------------------------
+J  Pi    =    1   -1              ! ang. mom. and parity           |
+K        =    0                   ! ang. mom. projection           |
+iso      =    1                   ! 0 (b-) 1 (b+)|
+c------quasiparticle cut-offs---------------------------------------
+equ_cut  = 500.0                  ! max energy of qp pair          |
+qptresh  =  0.0                   ! UV treshold                    |
+c-----------mesh properties(only lin.res.)--------------------------
+beta_dec =    0                   | 1b-, 2b+, 3EC                  |
+en_start =  0.0                   ! start energy (QRPA)            |
+en_end   = 10.0                   ! end energy   (QRPA)            |
+en_int   =  0.1                   ! energy delta                   |
+eta      =  1.00                  ! width                          |
+c----- isoscalar pairing strength ---------------------------------|
+V0_pp    =  1.431                                                   |
+c----- Landau-Migdal strength -------------------------------------|
+deltafac =  0.613                                                   |
+c------------------------------------------------------------------|
+ioffset  =  0                     ! 1 yes 0 no                     |
+energy   = +0.000                 ! MeV                            |
+c-------------------------------------------------------------------
+N_oper   =  5                     ! number of operators to consdr  |
+NSDR
+RSDR
+NDIP
+RDIP
+ALPH
